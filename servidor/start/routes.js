@@ -21,8 +21,10 @@ Route.post("/authenticate", "AuthController.authenticate");
 
 Route.get("/app", "AppController.index").middleware(['auth']);
 
-Route.group(() => {
-    Route.resource("pesquisas", "PesquisaController")
-        .apiOnly()
-        .except("update");
-}).middleware(["auth"]);
+Route.resource('pesquisas', 'PesquisaController')
+  .apiOnly()
+  .middleware('auth')
+
+Route.resource('drogas', 'DrogaController')
+  .apiOnly()
+  .middleware('auth')

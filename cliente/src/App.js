@@ -5,6 +5,8 @@ import Routes from './routes';
 import GlobalStyle from './styles/global';
 import { ToastContainer } from 'react-toastify';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <BrowserRouter>

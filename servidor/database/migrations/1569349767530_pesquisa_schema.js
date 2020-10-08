@@ -16,6 +16,7 @@ class PesquisaSchema extends Schema {
         .onUpdate("CASCADE")
         .onDelete("CASCADE")
       table.string("proteina", 240).notNullable()
+      table.string("score", 240).notNullable()
       table.timestamps()
     })
   }
